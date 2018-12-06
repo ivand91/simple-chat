@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,600");
+
+body {
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/bg.jpg') center fixed no-repeat;
+	background-size: cover;
+	font-family: Nunito;
+}
+
+input:required {
+    box-shadow: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+a::-moz-focus-inner {
+    border: 0 !important;
+}
+  
+input:focus, input:hover, input:active,
+button:focus, button:hover, button:active {
+     outline: 0 !important;
+}
+
+/* LOGIN AND REGISTER CSS START */
+.auth {
+	box-sizing: border-box;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.logo {
+	display: block;
+	width: 200px;
+	margin: 0 auto 20px;
+}
+
+.auth-form {
+	background-color: #00000088;
+	padding: 40px;
+	border-radius: 13px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-control {
+	box-sizing: border-box;
+	width: 100%;
+	height: 40px;
+	padding: 0px 10px;
+	font-size: 17px;
+	border: none;
+	border-radius: 6px;
+	color: #6E3667;
+}
+
+.auth-btn {
+	width: 40%;
+	height: 40px;
+	background-color: #00000066;
+	color: #FFF;
+	font-size: 17px;
+	border: 1px solid white;
+	border-radius: 6px;
+}
+
+.auth-form .sm-text {
+	float: right;
+	color: #F9CF00;
+	font-size: 17px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+/* LOGIN AND REGISTER CSS END */
+
+a {
+	text-decoration: none;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.alert {
+	color: #F9CF00;
+	font-weight: bold;
+}
+
+.errors {
+	color: #F9CF00;
+	list-style-type: none;
+	padding-left: 0px;
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 420px) {
+	.auth {
+		width: 90%;
+	}
+
+	.logo {
+		width: 150px;
+	}
+	
+	.auth-form {
+		padding: 20px;
+	}
+	
+	.auth-btn {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	
+	.auth-form .sm-text {
+		width: 100%;
+		display: block;
+		float: none;
+		text-align: right;
+	}
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+
+	.auth {
+		width: 80%;
+	}
+	
+	.auth-form {
+		padding: 30px;
+	}
+	
+	.auth-btn {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+	.auth {
+		width: 60%;
+	}
+	
+	.auth-btn {
+		width: 60%;
+	}
+}

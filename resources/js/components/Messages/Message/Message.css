@@ -1,0 +1,86 @@
+.messages-window {
+    box-sizing: border-box;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    bottom: 130px;
+    right: 0;
+    padding: 20px; 
+    overflow-y: auto;
+}
+
+.message {
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    max-width: 35%;
+    color: #6E3667;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.message > span {
+    font-weight: bold;
+}
+
+.my-message {
+    background-color: #FFF;
+    float: right;
+    clear: both;
+}
+
+.other-message {
+    background-color: whitesmoke;
+    float: left;
+    clear: both;
+}
+
+@media only screen and (max-width: 420px) {
+
+    .messages-window {
+        width: 100%;
+        bottom: 100px;
+        padding: 20px 13px; 
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 6px 13px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 599px) {
+    .messages-window {
+        width: 100%;
+        padding: 20px 16px; 
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 8px 15px;
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .messages-window {
+        width: 75%;
+    }
+
+    .message {
+        max-width: 75%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .messages-window {
+        width: 75%;
+    }
+
+    .message {
+        max-width: 70%;
+    }
+}

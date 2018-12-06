@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,600");
+
+.textbox {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    line-height: 1;
+}
+
+.textbox > textarea {
+    background-color: #FFFFFF;
+    width: 100%;
+    min-height: 130px;
+    padding: 15px 220px 15px 10px;
+    color: #6E3667;
+    resize: none;
+    border: none;
+    line-height: 1.5;
+}
+
+.textbox > button {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Nunito';
+    font-size: 17px;
+    border-bottom: 5px solid #CE5C00;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(#FAA328,#CF5E01);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px black;
+    transition: 150ms ease;
+    text-align: center;
+    line-height: 40px;
+}
+  
+.textbox > button:active {
+    border: none;
+    border-bottom: 2px solid rgb(177, 80, 1);
+    box-shadow: 0px 1px 5px grey;
+    background: linear-gradient(#CF5E01,#FAA328);
+    color: #FFF;
+}
+
+@media only screen and (max-width: 420px) {
+
+    .textbox {
+        width: 100%;
+    }
+
+    .textbox > textarea {
+        min-height: 100px;
+        padding: 15px 33% 15px 10px;
+    }
+    
+    .textbox > button {
+        right: 13px;
+        bottom: 15px;
+        width: 22%;
+        height: 30px;
+        font-size: 15px;
+        border-bottom: 3px solid #CE5C00;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 599px) {
+    .textbox {
+        width: 100%;
+    }
+
+    .textbox > textarea {
+        padding: 15px 33% 15px 10px;
+    }
+    
+    .textbox > button {
+        right: 16px;
+        bottom: 20px;
+        width: 20%;
+        height: 35px;
+        font-size: 16px;
+        border-bottom: 4px solid #CE5C00;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .textbox {
+        width: 75%;
+    }
+
+    .textbox > textarea {
+        padding: 15px 35% 15px 10px;
+    }
+
+    .textbox > button {
+        right: 25px;
+        bottom: 20px;
+        width: 22%;
+        height: 35px;
+        font-size: 16px;
+        border-bottom: 3px solid #CE5C00;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .textbox {
+        width: 75%;
+    }
+
+    .textbox > textarea {
+        padding: 15px 28% 15px 10px;
+    }
+
+    .textbox > button {
+        right: 30px;
+        bottom: 20px;
+        width: 16%;
+        height: 35px;
+        font-size: 17px;
+        border-bottom: 4px solid #CE5C00;
+        line-height: 35px;
+    }
+}
