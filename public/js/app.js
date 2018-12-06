@@ -19731,7 +19731,7 @@ window.io = __webpack_require__(63);
 if (typeof io !== 'undefined') {
     window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
         broadcaster: 'socket.io',
-        host: window.location.hostname + ':6001'
+        host: 'http://simple-react-chat-app.herokuapp.com:6001'
     });
 }
 
@@ -46042,8 +46042,10 @@ var ChatRoom = function (_Component) {
         if (window.location.host == 'localhost') {
             appUrl = window.location.protocol + "//" + window.location.host + "/chat/public/";
         } else {
-            appUrl = window.location.protocol + "//" + window.location.host + "/";
+            appUrl = window.location.protocol + "://" + window.location.host + "/";
         }
+
+        console.log(appUrl);
 
         _this.state = {
             url: appUrl,
@@ -69706,8 +69708,6 @@ var UserList = function (_Component) {
             url: props.url,
             visibility: props.visibility
         };
-
-        console.log(props.visibility);
         return _this;
     }
 
