@@ -13,6 +13,7 @@ npm-debug.log
 yarn-error.log
 composer.lock
 .env
+.env.example
 .env.*.php
 .env.php
 .DS_Store
