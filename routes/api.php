@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('online-users', 'MainController@getOnlineUsers');
 Route::get('messages', 'MainController@getMessages');
 Route::post('send-message', 'MainController@sendMessage');
