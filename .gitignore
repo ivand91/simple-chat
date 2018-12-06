@@ -1,4 +1,8 @@
+/node_modules
 /public/hot
+/public/storage
+/storage/*.key
+/vendor
 /.idea
 /.vscode
 /nbproject
@@ -7,6 +11,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+composer.lock
 .env
+.env.*.php
+.env.php
+.DS_Store
 .phpunit.result.cache
-/vendor
