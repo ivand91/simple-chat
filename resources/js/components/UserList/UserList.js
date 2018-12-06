@@ -13,8 +13,6 @@ class UserList extends Component {
             url : props.url,
             visibility : props.visibility
         }
-        
-        console.log(props.visibility);
     }
 
     componentDidMount() {

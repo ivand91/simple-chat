@@ -18,8 +18,10 @@ export default class ChatRoom extends Component {
         if(window.location.host == 'localhost') {
             appUrl = window.location.protocol+"//"+window.location.host+"/chat/public/";
         } else {
-            appUrl = window.location.protocol+"//"+window.location.host+"/";
+            appUrl = window.location.protocol+"://"+window.location.host+"/";
         }
+
+        console.log(appUrl);
         
         this.state = {
             url : appUrl,
