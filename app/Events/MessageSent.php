@@ -44,6 +44,8 @@ class MessageSent implements ShouldBroadcast
     {
         $username = User::find($this->userId)->username;
 
+        Log::info('Broadcasted MessageSent Event with message na kanalu simple-chat: '.$this->message);
+
         return [
             'message' => [$this->messageId, $this->message, $this->userId, $username]
         ];
