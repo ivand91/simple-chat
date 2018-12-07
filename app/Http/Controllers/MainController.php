@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 use App\User;
 use App\Message;
 
@@ -35,6 +35,8 @@ class MainController extends Controller
             $message->save();
 
             broadcast(new \App\Events\MessageSent($message->id, $text, $userId));
+
+            Log::info('Broadcasted MessageSent Event with message: '.$text);
         }
     }
 }

@@ -53,6 +53,8 @@ export default class ChatRoom extends Component {
             console.log(error);
         });
 
+        console.log("Dolazimo do okidanja eventa...");
+
         window.Echo.channel('simple-chat').listen('MessageSent', (event) => {
             this.setState({
                 messages : [...this.state.messages, event.message]

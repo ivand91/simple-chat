@@ -46081,6 +46081,8 @@ var ChatRoom = function (_Component) {
                 console.log(error);
             });
 
+            console.log("Dolazimo do okidanja eventa...");
+
             window.Echo.channel('simple-chat').listen('MessageSent', function (event) {
                 _this2.setState({
                     messages: [].concat(_toConsumableArray(_this2.state.messages), [event.message])
