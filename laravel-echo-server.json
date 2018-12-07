@@ -1,5 +1,5 @@
 {
-	"authHost": "http://localhost",
+	"authHost": "http://simple-react-chat-app.herokuapp.com",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
