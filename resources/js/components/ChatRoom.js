@@ -53,8 +53,6 @@ export default class ChatRoom extends Component {
             console.log(error);
         });
 
-        console.log("Dolazimo do okidanja eventa...");
-
         window.Echo.channel('simple-chat').listen('MessageSent', (event) => {
             this.setState({
                 messages : [...this.state.messages, event.message]
@@ -62,9 +60,6 @@ export default class ChatRoom extends Component {
 
             let el = document.getElementById('msg'+event.message[0]);
             el.scrollIntoView({ behavior: 'smooth' });
-
-            console.log("Okinut event slanja poruke i došao u echo i sad se slušao!");
-            console.log("MessageSentEvent-->", event.message);
         });
     }
 

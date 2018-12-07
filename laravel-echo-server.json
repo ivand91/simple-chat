@@ -1,5 +1,5 @@
 {
-	"authHost": "http://simple-react-chat-app.herokuapp.com",
+	"authHost": "http://localhost",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
@@ -9,17 +9,13 @@
 	],
 	"database": "redis",
 	"databaseConfig": {
-		"redis": {
-			"port": "12519",
-			"host": "ec2-52-31-225-103.eu-west-1.compute.amazonaws.com",
-			"password" : "pfea68a2ac85b767896f2342f28dcece3070ed0666441388c7bedcf1ff6363c12"
-		},
+		"redis": {},
 		"sqlite": {
 			"databasePath": "/database/laravel-echo-server.sqlite"
 		}
 	},
-	"devMode": false,
-	"host": null,
+	"devMode": true,
+	"host" : "localhost",
 	"port": "6001",
 	"protocol": "http",
 	"socketio": {},
@@ -32,9 +28,9 @@
 		"redis": true
 	},
 	"apiOriginAllow": {
-		"allowCors": true,
-        "allowOrigin": "*",
-        "allowMethods": "GET, POST",
-        "allowHeaders": "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
+		"allowCors": false,
+		"allowOrigin": "",
+		"allowMethods": "",
+		"allowHeaders": ""
 	}
 }

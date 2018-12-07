@@ -2,8 +2,6 @@
 
 return [
 
-    'log' => env('LOG_CHANNEL', 'errorlog'),
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -54,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://simple-react-chat-app.herokuapp.com'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------

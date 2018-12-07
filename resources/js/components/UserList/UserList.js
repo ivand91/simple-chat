@@ -40,8 +40,6 @@ class UserList extends Component {
             this.setState({
                 onlineUsers : users
             });
-
-            console.log("Okinut event online korisnika i došao u echo i sad se slušao!");
         });
     }
 

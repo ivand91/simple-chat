@@ -13,7 +13,7 @@ class AuthController extends Controller
 {
     public function showRegister() {
         if(Auth::check()) {
-            return redirect('/chat');
+            return redirect('/room');
         } else {
             return view('register');
         }
@@ -21,7 +21,7 @@ class AuthController extends Controller
 
     public function showLogin() {
         if(Auth::check()) {
-            return redirect('/chat');
+            return redirect('/room');
         } else {
             return view('login');
         }
@@ -43,7 +43,7 @@ class AuthController extends Controller
         if (Auth::attempt(['username' => $req->username, 'password' => $req->password])) {
             User::where('username', $req->username)->update(['is_online' => 1]);
             broadcast(new \App\Events\OnlineUsers());
-            return redirect('/chat');
+            return redirect('/room');
         } else {
             // Wrong email and/or password
             $message = 'Pogrešno korisničko ime i/ili lozinka.';

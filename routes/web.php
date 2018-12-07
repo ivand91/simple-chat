@@ -20,6 +20,6 @@ Route::get('/login', 'AuthController@showLogin')->name('login');
 Route::post('/login', 'AuthController@login');
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::view('/chat', 'chat');
+    Route::view('/room', 'chat');
     Route::get('/logout', 'AuthController@logout');
 });

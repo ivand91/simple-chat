@@ -73,11 +73,7 @@
     right: 0;
     left: 0;
     width: 100%;
-    background-color: #000000CC; 
-}
-
-.messages-window .user-list ul {
-    height: 60%;
+    background-color: #000000CC;
 }
 
 .show {
@@ -86,6 +82,49 @@
 
 .hide {
     visibility: hidden;
+}
+
+@media only screen and (max-width: 420px) {
+    
+    .messages-window .user-list ul {
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        position: absolute;
+        bottom: 160px;
+        top: 60px;
+        left: 7%;
+    }
+
+    .btn-logout {
+        display: block;
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        width: 25%;
+        margin-left: -12.5%;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 599px) {
+    .messages-window .user-list ul {
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        position: absolute;
+        bottom: 200px;
+        top: 60px;
+        left: 7%;
+    }
+
+    .btn-logout {
+        display: block;
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        width: 25%;
+        margin-left: -12.5%;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {

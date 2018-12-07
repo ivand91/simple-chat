@@ -19731,7 +19731,7 @@ window.io = __webpack_require__(63);
 if (typeof io !== 'undefined') {
     window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
         broadcaster: 'socket.io',
-        host: 'http://simple-react-chat-app.herokuapp.com:6001'
+        host: window.location.hostname + ':6001'
     });
 }
 
@@ -46081,8 +46081,6 @@ var ChatRoom = function (_Component) {
                 console.log(error);
             });
 
-            console.log("Dolazimo do okidanja eventa...");
-
             window.Echo.channel('simple-chat').listen('MessageSent', function (event) {
                 _this2.setState({
                     messages: [].concat(_toConsumableArray(_this2.state.messages), [event.message])
@@ -46090,9 +46088,6 @@ var ChatRoom = function (_Component) {
 
                 var el = document.getElementById('msg' + event.message[0]);
                 el.scrollIntoView({ behavior: 'smooth' });
-
-                console.log("Okinut event slanja poruke i došao u echo i sad se slušao!");
-                console.log("MessageSentEvent-->", event.message);
             });
         }
     }, {
@@ -69751,8 +69746,6 @@ var UserList = function (_Component) {
                 _this2.setState({
                     onlineUsers: users
                 });
-
-                console.log("Okinut event online korisnika i došao u echo i sad se slušao!");
             });
         }
     }, {
@@ -69837,7 +69830,7 @@ exports = module.exports = __webpack_require__(8)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Nunito:200,600);", ""]);
 
 // module
-exports.push([module.i, ".user-list {\r\n    box-sizing: border-box;\r\n    position: fixed;\r\n    bottom: 0;\r\n    width: 20%;\r\n    height: 100%;\r\n    background-color: #00000088;\r\n}\r\n\r\n.user-list > p {\r\n    display: inline-block;\r\n    width: 86%;\r\n    margin-left: 7%;\r\n    font-family: 'Nunito';\r\n    font-size: 19px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    color: #FFF;\r\n    padding: 10px 0px 6px;\r\n    border-bottom: 1px solid #FFF;\r\n}\r\n\r\n.user-list ul {\r\n    height: 85%;\r\n    list-style-type: none;\r\n    color: #FFF;\r\n    font-size: 15px;\r\n    padding-left: 0px;\r\n}\r\n\r\n.user-list li {\r\n    display: block;\r\n    width: 85%;\r\n    text-align: center;\r\n}\r\n\r\n.btn-logout {\r\n    display: block;\r\n    position: fixed;\r\n    bottom: 20px;\r\n    width: 8%;\r\n    height: 40px;\r\n    margin-left: 5%;\r\n    font-family: 'Nunito';\r\n    font-size: 17px;\r\n    border-bottom: 5px solid #CE5C00;\r\n    border-top: none;\r\n    border-left: none;\r\n    border-right: none;\r\n    background: linear-gradient(#FAA328,#CF5E01);\r\n    color: white;\r\n    border-radius: 10px;\r\n    box-shadow: 0px 2px 10px black;\r\n    transition: 150ms ease;\r\n    text-align: center;\r\n    line-height: 40px;\r\n}\r\n\r\n.btn-logout:hover {\r\n    text-decoration: none;\r\n    color: #FFF;\r\n}\r\n\r\n.btn-logout:active {\r\n    bottom: 18px;\r\n}\r\n\r\n.messages-window .user-list {\r\n    box-sizing: border-box;\r\n    position: fixed;\r\n    right: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    background-color: #000000CC; \r\n}\r\n\r\n.messages-window .user-list ul {\r\n    height: 60%;\r\n}\r\n\r\n.show {\r\n    visibility: visible;\r\n}\r\n\r\n.hide {\r\n    visibility: hidden;\r\n}\r\n\r\n@media only screen and (min-width: 600px) and (max-width: 767px) {\r\n    .user-list {\r\n        width: 25%;\r\n    }\r\n\r\n    .user-list > p {\r\n        width: 90%;\r\n        margin-left: 5%;\r\n    }\r\n\r\n    .btn-logout {\r\n        width: 15%;\r\n        height: 35px;\r\n        margin-left: 5%;\r\n        border-bottom: 3px solid #CE5C00;\r\n        line-height: 35px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 768px) and (max-width: 1023px) {\r\n    .user-list {\r\n        width: 25%;\r\n    }\r\n\r\n    .btn-logout {\r\n        width: 11%;\r\n        height: 35px;\r\n        margin-left: 7%;\r\n        border-bottom: 4px solid #CE5C00;\r\n        line-height: 35px;\r\n    }\r\n}", ""]);
+exports.push([module.i, ".user-list {\r\n    box-sizing: border-box;\r\n    position: fixed;\r\n    bottom: 0;\r\n    width: 20%;\r\n    height: 100%;\r\n    background-color: #00000088;\r\n}\r\n\r\n.user-list > p {\r\n    display: inline-block;\r\n    width: 86%;\r\n    margin-left: 7%;\r\n    font-family: 'Nunito';\r\n    font-size: 19px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    color: #FFF;\r\n    padding: 10px 0px 6px;\r\n    border-bottom: 1px solid #FFF;\r\n}\r\n\r\n.user-list ul {\r\n    height: 85%;\r\n    list-style-type: none;\r\n    color: #FFF;\r\n    font-size: 15px;\r\n    padding-left: 0px;\r\n}\r\n\r\n.user-list li {\r\n    display: block;\r\n    width: 85%;\r\n    text-align: center;\r\n}\r\n\r\n.btn-logout {\r\n    display: block;\r\n    position: fixed;\r\n    bottom: 20px;\r\n    width: 8%;\r\n    height: 40px;\r\n    margin-left: 5%;\r\n    font-family: 'Nunito';\r\n    font-size: 17px;\r\n    border-bottom: 5px solid #CE5C00;\r\n    border-top: none;\r\n    border-left: none;\r\n    border-right: none;\r\n    background: linear-gradient(#FAA328,#CF5E01);\r\n    color: white;\r\n    border-radius: 10px;\r\n    box-shadow: 0px 2px 10px black;\r\n    transition: 150ms ease;\r\n    text-align: center;\r\n    line-height: 40px;\r\n}\r\n\r\n.btn-logout:hover {\r\n    text-decoration: none;\r\n    color: #FFF;\r\n}\r\n\r\n.btn-logout:active {\r\n    bottom: 18px;\r\n}\r\n\r\n.messages-window .user-list {\r\n    box-sizing: border-box;\r\n    position: fixed;\r\n    right: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    background-color: #000000CC;\r\n}\r\n\r\n.show {\r\n    visibility: visible;\r\n}\r\n\r\n.hide {\r\n    visibility: hidden;\r\n}\r\n\r\n@media only screen and (max-width: 420px) {\r\n    \r\n    .messages-window .user-list ul {\r\n        width: 100%;\r\n        height: auto;\r\n        overflow-y: auto;\r\n        position: absolute;\r\n        bottom: 160px;\r\n        top: 60px;\r\n        left: 7%;\r\n    }\r\n\r\n    .btn-logout {\r\n        display: block;\r\n        position: absolute;\r\n        bottom: 120px;\r\n        left: 50%;\r\n        width: 25%;\r\n        margin-left: -12.5%;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 421px) and (max-width: 599px) {\r\n    .messages-window .user-list ul {\r\n        width: 100%;\r\n        height: auto;\r\n        overflow-y: auto;\r\n        position: absolute;\r\n        bottom: 200px;\r\n        top: 60px;\r\n        left: 7%;\r\n    }\r\n\r\n    .btn-logout {\r\n        display: block;\r\n        position: absolute;\r\n        bottom: 150px;\r\n        left: 50%;\r\n        width: 25%;\r\n        margin-left: -12.5%;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 600px) and (max-width: 767px) {\r\n    .user-list {\r\n        width: 25%;\r\n    }\r\n\r\n    .user-list > p {\r\n        width: 90%;\r\n        margin-left: 5%;\r\n    }\r\n\r\n    .btn-logout {\r\n        width: 15%;\r\n        height: 35px;\r\n        margin-left: 5%;\r\n        border-bottom: 3px solid #CE5C00;\r\n        line-height: 35px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 768px) and (max-width: 1023px) {\r\n    .user-list {\r\n        width: 25%;\r\n    }\r\n\r\n    .btn-logout {\r\n        width: 11%;\r\n        height: 35px;\r\n        margin-left: 7%;\r\n        border-bottom: 4px solid #CE5C00;\r\n        line-height: 35px;\r\n    }\r\n}", ""]);
 
 // exports
 
