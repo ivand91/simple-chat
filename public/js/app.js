@@ -46088,6 +46088,9 @@ var ChatRoom = function (_Component) {
 
                 var el = document.getElementById('msg' + event.message[0]);
                 el.scrollIntoView({ behavior: 'smooth' });
+
+                console.log("Okinut event slanja poruke i došao u echo i sad se slušao!");
+                console.log("MessageSentEvent-->", event.message);
             });
         }
     }, {
@@ -69746,6 +69749,8 @@ var UserList = function (_Component) {
                 _this2.setState({
                     onlineUsers: users
                 });
+
+                console.log("Okinut event online korisnika i došao u echo i sad se slušao!");
             });
         }
     }, {

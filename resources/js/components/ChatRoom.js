@@ -60,6 +60,9 @@ export default class ChatRoom extends Component {
 
             let el = document.getElementById('msg'+event.message[0]);
             el.scrollIntoView({ behavior: 'smooth' });
+
+            console.log("Okinut event slanja poruke i došao u echo i sad se slušao!");
+            console.log("MessageSentEvent-->", event.message);
         });
     }
 
