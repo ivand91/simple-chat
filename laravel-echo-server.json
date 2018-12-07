@@ -1,5 +1,5 @@
 {
-	"authHost": "http://localhost",
+	"authHost": "http://simple-react-chat-app.herokuapp.com",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
@@ -9,12 +9,16 @@
 	],
 	"database": "redis",
 	"databaseConfig": {
-		"redis": {},
+		"redis": {
+			"port": "6379",
+			"host": "simple-react-chat-app.herokuapp.com"
+		},
 		"sqlite": {
 			"databasePath": "/database/laravel-echo-server.sqlite"
 		}
 	},
 	"devMode": true,
+	"host": "simple-react-chat-app.herokuapp.com",
 	"port": "6001",
 	"protocol": "http",
 	"socketio": {},
