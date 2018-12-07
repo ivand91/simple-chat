@@ -10,15 +10,16 @@
 	"database": "redis",
 	"databaseConfig": {
 		"redis": {
-			"port": "6379",
-			"host": "simple-react-chat-app.herokuapp.com"
+			"port": "12519",
+			"host": "ec2-52-31-225-103.eu-west-1.compute.amazonaws.com",
+			"password" : "pfea68a2ac85b767896f2342f28dcece3070ed0666441388c7bedcf1ff6363c12"
 		},
 		"sqlite": {
 			"databasePath": "/database/laravel-echo-server.sqlite"
 		}
 	},
 	"devMode": true,
-	"host": "simple-react-chat-app.herokuapp.com",
+	"host": "localhost",
 	"port": "6001",
 	"protocol": "http",
 	"socketio": {},

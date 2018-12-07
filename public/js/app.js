@@ -19733,8 +19733,6 @@ if (typeof io !== 'undefined') {
         broadcaster: 'socket.io',
         host: 'http://simple-react-chat-app.herokuapp.com:6001'
     });
-
-    console.log("echo nešto.");
 }
 
 /***/ }),
